@@ -1,1 +1,11 @@
 # This playbook is going to patch all servers
+---
+- name: Patching Server
+  hosts: nasir
+  gather_facts: no
+
+  tasks: Installing http
+  dnf: 
+   name: httpd
+   state: present
+   
