@@ -4,11 +4,9 @@
   hosts: nasir
   gather_facts: no
 
-  tasks: Installing http
-  dnf: 
-   name: httpd
-   state: started
-   enabled: yes
-   permanent: true
-   immediate: true
-   
+  tasks: Update all the package
+  ansible.builtin.dnf: 
+    - name: Update all packages
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest  
