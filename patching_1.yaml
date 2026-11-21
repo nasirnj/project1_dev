@@ -7,5 +7,8 @@
   tasks: Installing http
   dnf: 
    name: httpd
-   state: present
+   state: started
+   enabled: yes
+   permanent: true
+   immediate: true
    
